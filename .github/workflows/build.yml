@@ -1,0 +1,45 @@
+# .github/workflows/build.yml
+# GitHub Actions configuration file for latex
+# See https://github.com/xu-cheng/latex-action for details
+
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  run:
+    name: Generate pdf document
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Generate pdf documents
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: "*.tex"
+          glob_root_file: true
+          args: -file-line-error -halt-on-error -interaction=nonstopmode
+          extra_fonts: |
+            ./fonts/fira-mono/*.otf
+            ./fonts/fira-sans/*.otf
+          pre_compile: tlmgr update --self && tlmgr update --all
+
+      - name: Rename pdf documents
+        run: |
+          TIMESTAMP=$(date "+%FT%H-%M-%S%Z")
+          for f in *.pdf; do mv "$f" "${f%.*}_${GITHUB_ACTOR}_${TIMESTAMP}.pdf" done
+
+      - name: Store artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          path: "*.pdf"
+          if-no-files-found: error
