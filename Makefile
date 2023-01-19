@@ -15,7 +15,7 @@
 LC := latexmk
 LCFLAGS := -file-line-error -halt-on-error -interaction=nonstopmode
 
-all: $(basename $(wildcard *.tex))
+latex: $(basename $(wildcard *.tex))
 
 %: %.tex
 	$(LC) $(LCFLAGS) $^
