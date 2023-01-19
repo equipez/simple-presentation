@@ -159,3 +159,46 @@
 
 % Patch warning `Package hyperref Warning: Token not allowed in a PDF string (Unicode)'
 \pdfstringdefDisableCommands{\def\translate#1{#1}}
+
+% Packages for mathematics
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{bm}
+\RequirePackage{empheq}
+\RequirePackage[bb=dsfontserif]{mathalfa}
+
+% Mathematical constants, sets, and notations
+\newcommand{\eu}{\mathrm{e}}
+\newcommand{\iu}{\mathrm{i}}
+\newcommand{\du}{\mathrm{d}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\T}{\mathsf{T}}
+
+% Mathematical operators
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\vspan}{span}
+
+% Mathematical macros
+\newcommand{\abs}[2][]{\ifthenelse{\equal{#1}{auto}}{\left}{#1}\lvert#2\ifthenelse{\equal{#1}{auto}}{\right}{#1}\rvert}
+\newcommand{\ceil}[2][]{\ifthenelse{\equal{#1}{auto}}{\left}{#1}\lceil#2\ifthenelse{\equal{#1}{auto}}{\right}{#1}\rceil}
+\newcommand{\floor}[2][]{\ifthenelse{\equal{#1}{auto}}{\left}{#1}\lfloor#2\ifthenelse{\equal{#1}{auto}}{\right}{#1}\rfloor}
+\newcommand{\norm}[2][]{\ifthenelse{\equal{#1}{auto}}{\left}{#1}\lVert#2\ifthenelse{\equal{#1}{auto}}{\right}{#1}\rVert}
+\newcommand{\set}[2][]{\ifthenelse{\equal{#1}{auto}}{\left}{#1}\{#2\ifthenelse{\equal{#1}{auto}}{\right}{#1}\}}
+\newcommand{\inner}[2][]{\ifthenelse{\equal{#1}{auto}}{\left}{#1}\langle#2\ifthenelse{\equal{#1}{auto}}{\right}{#1}\rangle}
+
+% Fine-tuning spacing in formulas
+% Make @ behave as per catcode 13 (active). The TeXbook, p. 155.
+\mathcode`@="8000{\catcode`\@=\active\gdef@{\mkern1mu}}

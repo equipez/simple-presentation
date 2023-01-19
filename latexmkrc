@@ -25,4 +25,4 @@ push @generated_exts, "xdv";
 $bibtex_use = 2;
 
 # Remove extra extensions on clean
-$clean_ext = "nav snm";
+$clean_ext = "nav run.xml snm";
