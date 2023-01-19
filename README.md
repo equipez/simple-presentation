@@ -34,31 +34,31 @@ Therefore, if you split your presentation into several documents, create a folde
 This template also includes the following mathematical commands.
 All the options in the macros are optional (but not the arguments).
 
-| Command                        | Option                                      | Rendering                    |
-| ------------------------------ | ------------------------------------------- | ---------------------------- |
-| `\eu`                          | :x:                                         | $\mathrm{e}$                 |
-| `\iu`                          | :x:                                         | $\mathrm{i}$                 |
-| `\du`                          | :x:                                         | $\mathrm{d}$                 |
-| `\C`                           | :x:                                         | $\mathbb{C}$                 |
-| `\F`                           | :x:                                         | $\mathbb{F}$                 |
-| `\N`                           | :x:                                         | $\mathbb{N}$                 |
-| `\Q`                           | :x:                                         | $\mathbb{Q}$                 |
-| `\R`                           | :x:                                         | $\mathbb{R}$                 |
-| `\Z`                           | :x:                                         | $\mathbb{Z}$                 |
-| `\T`                           | :x:                                         | $\mathsf{T}$                 |
-| `\argmax`                      | :x:                                         | $\mathrm{arg}\,\mathrm{max}$ |
-| `\argmin`                      | :x:                                         | $\mathrm{arg}\,\mathrm{min}$ |
-| `\card`                        | :x:                                         | $\mathrm{card}$              |
-| `\conv`                        | :x:                                         | $\mathrm{conv}$              |
-| `\rank`                        | :x:                                         | $\mathrm{rank}$              |
-| `\sgn`                         | :x:                                         | $\mathrm{sgn}$               |
-| `\vspan`                       | :x:                                         | $\mathrm{span}$              |
-| `\abs[<option>]{<argument>}`   | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\lvert x \rvert$            |
-| `\ceil[<option>]{<argument>}`  | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\lceil x \rceil$            |
-| `\floor[<option>]{<argument>}` | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\lfloor x \rfloor$          |
-| `\norm[<option>]{<argument>}`  | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\lVert x \rVert$            |
-| `\set[<option>]{<argument>}`   | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\{ x \}$                    |
-| `\inner[<option>]{<argument>}` | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\langle x \rangle$          |
+| Command                        | Options                                     | Rendering                        |
+| ------------------------------ | ------------------------------------------- | -------------------------------- |
+| `\eu`                          | :x:                                         | $\mathrm{e}$ (exponential)       |
+| `\iu`                          | :x:                                         | $\mathrm{i}$ (complex)           |
+| `\du`                          | :x:                                         | $\mathrm{d}$ (differential)      |
+| `\C`                           | :x:                                         | $\mathbb{C}$                     |
+| `\F`                           | :x:                                         | $\mathbb{F}$                     |
+| `\N`                           | :x:                                         | $\mathbb{N}$                     |
+| `\Q`                           | :x:                                         | $\mathbb{Q}$                     |
+| `\R`                           | :x:                                         | $\mathbb{R}$                     |
+| `\Z`                           | :x:                                         | $\mathbb{Z}$                     |
+| `\T`                           | :x:                                         | $\mathsf{T}$ (transpose)         |
+| `\argmax`                      | :x:                                         | $\mathrm{argmax}$                |
+| `\argmin`                      | :x:                                         | $\mathrm{argmin}$                |
+| `\card`                        | :x:                                         | $\mathrm{card}$                  |
+| `\conv`                        | :x:                                         | $\mathrm{conv}$                  |
+| `\rank`                        | :x:                                         | $\mathrm{rank}$                  |
+| `\sgn`                         | :x:                                         | $\mathrm{sgn}$                   |
+| `\vspan`                       | :x:                                         | $\mathrm{span}$                  |
+| `\abs[<option>]{<argument>}`   | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\lvert x \rvert$                |
+| `\ceil[<option>]{<argument>}`  | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\lceil x \rceil$                |
+| `\floor[<option>]{<argument>}` | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\lfloor x \rfloor$              |
+| `\norm[<option>]{<argument>}`  | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\lVert x \rVert$                |
+| `\set[<option>]{<argument>}`   | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\{ x \}$ (GitHub renders badly) |
+| `\inner[<option>]{<argument>}` | `\big`, `\Big`, `\bigg`, `\Bigg`, or `auto` | $\langle x, y \rangle$           |
 
 Finally, the template also include a command `@` for fine-tuning mathematical formula.
 See p. 155 of The TeXbook for details.
